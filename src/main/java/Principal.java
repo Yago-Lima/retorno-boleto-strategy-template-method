@@ -14,18 +14,12 @@ public class Principal {
 
     public static void main(String[] args) throws URISyntaxException {
 
-        URI caminhoArquivoBancoBrasil = Principal.class.getResource("bancoBrasil.csv").toURI();
-        final var processador = new ProcessadorBoletos();
+        URI caminhoArquivoBancoBrasil = Principal.class.getResource("bancoBradesco.csv").toURI();
+        final var processador = new ProcessadorBoletos(ProcessadorBoletos::lerArquivoBradesco);
 
         System.out.println("Lendo arquivo " + caminhoArquivoBancoBrasil + "\n");
 
         processador.processar(caminhoArquivoBancoBrasil);
-
-        URI caminhoArquivoBradesco = Principal.class.getResource("bancoBradesco.csv").toURI();
-
-        System.out.println("\n Lendo arquivo " + caminhoArquivoBancoBrasil + "\n");
-
-        processador.processar(caminhoArquivoBradesco);
 
     }
 }
