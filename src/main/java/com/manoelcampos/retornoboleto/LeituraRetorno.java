@@ -39,6 +39,6 @@ public interface LeituraRetorno {
             throw new RuntimeException(e);
         }
     }
-
+      Boleto processarLinhaArquivo(String[] vetor);
 
 }

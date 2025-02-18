@@ -3,7 +3,7 @@ package com.manoelcampos.retornoboleto;
 import java.net.URI;
 import java.util.List;
 
-public class ProcessadorBoletos {
+public  class ProcessadorBoletos {
     public final void processar(URI caminhoArquivo){
 
         var leituraRetorno = LeituraRetorno.newInstance(caminhoArquivo.toString());
